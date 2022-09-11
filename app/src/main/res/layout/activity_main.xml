@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0.00 C°"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_Beta"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:hint="Beta"
+            android:inputType="number"
+            android:textSize="24sp" />
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText_R25С"
+                android:layout_width="225dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:hint="R 25 C°"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_R25C"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:onClick="showDialog"
+                android:text="Ω"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText_RC"
+                android:layout_width="225dp"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:hint="R t"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_RC"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+
+                android:gravity="center"
+                android:onClick="showDialog"
+                android:text="Ω"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:onClick="Calculate"
+            android:text="Calculate"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/button123"-->
+<!--        android:layout_width="125dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:onClick="Clean"-->
+<!--        android:text="Clean  all"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
