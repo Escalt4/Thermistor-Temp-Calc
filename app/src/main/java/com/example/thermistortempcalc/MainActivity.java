@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
 
         editText_Beta = findViewById(R.id.editText_Beta);
         editText_R25C = findViewById(R.id.editText_R25С);
@@ -55,11 +54,9 @@ public class MainActivity extends AppCompatActivity {
         load_settings_if_exist();
     }
 
-
-
-    String del_end_point_zero(String str){
-        if (str.endsWith(".0")){
-            str = str.replace(".0","");
+    String del_end_point_zero(String str) {
+        if (str.endsWith(".0")) {
+            str = str.replace(".0", "");
         }
         return str;
     }
@@ -97,22 +94,6 @@ public class MainActivity extends AppCompatActivity {
         prefEditor.apply();
     }
 
-//    public void Clean(View view) {
-//        prefEditor.clear();
-//        prefEditor.apply();
-//
-//        editText_Beta.setText("");
-//        editText_R25C.setText("");
-//        editText_RC.setText("");
-//        editText_Beta.setText("");
-//        textView.setText("0.00 C°");
-//
-//        R25C_multiplier = 1;
-//        RC_multiplier = 1;
-//        button_R25C.setText(units[0]);
-//        button_RC.setText(units[0]);
-//    }
-
     public void showDialog(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -129,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
                 Calculate();
             }
         }).create().show();
-
-
     }
 
     public void Calculate(View view) {
@@ -138,8 +117,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Calculate() {
-
-
         if (editText_Beta.getText().toString().equals("") || editText_R25C.getText().toString().equals("") || editText_RC.getText().toString().equals("")) {
             return;
         }
@@ -158,5 +135,4 @@ public class MainActivity extends AppCompatActivity {
 
         save_settings();
     }
-
 }
